@@ -13,6 +13,14 @@ namespace ValidateXMLFile
 
         // Console.WriteLine Method
         // docs.microsoft.com/en-us/dotnet/api/system.console.writeline?view=net-5.0#System_Console_WriteLine_System_String_
+
+
+        // Create the path for the schema file.
+        // string schemaFile = Path.Combine(Request.PhysicalApplicationPath, @”App_Data\BooksList.xsd”);
+        // Indicate that elements in the namespace
+        // https://www.Books.com/BooksList should be validated using the schema file.
+        //settings.Schemas.Add(“https://www.Books.com/BooksList”,schemaFile);
+
         static void Main(string[] args)
         {
             Console.WriteLine($"System.Reflection.Assembly.GetExecutingAssembly().CodeBase : {System.Reflection.Assembly.GetExecutingAssembly().CodeBase}");

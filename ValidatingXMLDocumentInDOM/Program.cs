@@ -20,7 +20,82 @@ namespace ValidatingXMLDocumentInDOM
     {
         static void Main(string[] args)
         {
+            CreatingXMLSchemaValidatingXmlReader();
+            ValidatingXMLDocumentInDOM();
+        }
+        static void ValidatingXMLDocumentInDOM()
+        {
+            try 
+            {
+                // Create a new XmlDocument instance and load
+                // The XML document into the DOM.
+                XmlDocument document = new XmlDocument();
+                document.Load("contosoBooks.xml");
+
+                // Add the XML schema for the XML document to the 
+                // Schema property of the XmlDocument.
+                document.Schemas.Add("http://www.contoso.com/books", "contosoBooks.xsd");
+
+                // Validate the XML Document loaded into the DOM.
+                document.Validate(ValidationEventHandler);
+
+                // Make an invalid change to the first and last
+                // price elements in the XML document, and write
+                // the XmlSchemaInfo values assigned to the price
+                // element during validation to the console.
+                XmlNamespaceManager manager = new XmlNamespaceManager(document.NameTable);
+                manager.AddNamespace("bk", "http://www.contoso.com/books");
+
+                XmlNode priceNode = document.SelectSingleNode(@"/bk:bookstore/bk:book/bk:price", manager);
+
+                Console.WriteLine("SchemaInfo.IsDefault: {0}", priceNode.SchemaInfo.IsDefault);
+                Console.WriteLine("SchemaInfo.IsNil: {0}", priceNode.SchemaInfo.IsNil);
+                Console.WriteLine("SchemaInfo.SchemaElement: {0}", priceNode.SchemaInfo.SchemaElement);
+                Console.WriteLine("SchemaInfo.SchemaType: {0}", priceNode.SchemaInfo.SchemaType);
+                Console.WriteLine("SchemaInfo.Validity: {0}", priceNode.SchemaInfo.Validity);
+
+                priceNode.InnerXml = "A";
+
+                XmlNodeList priceNodes = document.SelectNodes(@"/bk:bookstore/bk:book/bk:price", manager);
+                XmlNode lastprice = priceNodes[priceNodes.Count - 1];
+
+                lastprice.InnerXml = "B";
+
+                // Validate the XML document with the invalid changes.
+                // The invalid changes cause schema validation errors.
+                document.Validate(ValidationEventHandler);
+
+                // Correct the invalid change to the first price element.
+                priceNode.InnerXml = "8.99";
+
+                // Validate only the first book element. The last book
+                // element is invalid, but not included in validation.
+                XmlNode bookNode = document.SelectSingleNode(@"/bk:bookstore/bk:book", manager);
+                document.Validate(ValidationEventHandler, bookNode);
+            }
+            catch (XmlException ex)
+            {
+                Console.WriteLine("XmlDocumentValidationExample.XmlException: {0}", ex.Message);
+            }
+            catch (XmlSchemaValidationException ex)
+            {
+                Console.WriteLine("XmlDocumentValidationExample.XmlSchemaValidationException: {0}", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("XmlDocumentValidationExample.Exception: {0}", ex.Message);
+            }
+        }
+        static void CreatingXMLSchemaValidatingXmlReader()
+        {
             // Console.WriteLine("Hello World!");
+            // [Creating an XML Schema-Validating XmlReader]
+            // To create an XML schema-validating XmlReader, follow steps.
+            // 1. Construct a new XmlReaderSettins instance.
+            // 2. Add an XML schema to the Schemas property of the XmlReaderSettings instance.
+            // 3. Specify Schema as the ValidationType.
+            // 4. Optionally specify ValidationFlags and a ValidationEventHandler to handle schema validation errors and warnings encountered during validation.
+            // 5. Finally, pass the XmlReaderSettings object to the Create method of the XmlReader class along with the XML document, creating a schema-validating XmlReader.
             try
             {
                 // Create a schema validating XmlReader.
@@ -84,7 +159,6 @@ namespace ValidatingXMLDocumentInDOM
             {
                 Console.WriteLine("XmlDocumentValidationExample.Exception: {0}", ex.Message);
             }
-
         }
         static void ValidationEventHandler(object sender, System.Xml.Schema.ValidationEventArgs args)
         {
