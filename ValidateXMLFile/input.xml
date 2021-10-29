@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EmployeeDetails>
+	<FirstName>Sagar</FirstName>
+	<MiddleName>H</MiddleName>
+	<LastName>Shinde</LastName>
+	<EmailId>sagarharidasshinde@gmail.com</EmailId>
+	<Mobild>9021063389</Mobild>
+	<Address>135/214, Hindustan Chowk, Mulund Colon, Mulund (W) - 40082</Address>
+	<Car>BMW</Car>
+</EmployeeDetails>

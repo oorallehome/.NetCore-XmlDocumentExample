@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocumentExample", "XmlDocumentExample\XmlDocumentExample.csproj", "{7F35EB22-1431-4AA9-8BEF-7EC9E42D6600}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateDynamicXMLFile", "GenerateDynamicXMLFile\GenerateDynamicXMLFile.csproj", "{7122E262-2437-46CB-BC2A-E319407053B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateXMLFile", "ValidateXMLFile\ValidateXMLFile.csproj", "{DB5773BE-5F8F-48D2-92AF-F80A07BD4884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLDataValidation", "XMLDataValidation\XMLDataValidation.csproj", "{04EFD5A8-4C66-4B24-8718-8758A3547FF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XSDValidationWithXmlSchemaSet", "XSDValidationWithXmlSchemaSet\XSDValidationWithXmlSchemaSet.csproj", "{E996F16B-284F-4FD7-B21A-C209A81C82E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidatingXMLDocumentInDOM", "ValidatingXMLDocumentInDOM\ValidatingXMLDocumentInDOM.csproj", "{6980375D-D3DC-4184-96C6-C2F438B7DD7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F35EB22-1431-4AA9-8BEF-7EC9E42D6600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F35EB22-1431-4AA9-8BEF-7EC9E42D6600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F35EB22-1431-4AA9-8BEF-7EC9E42D6600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F35EB22-1431-4AA9-8BEF-7EC9E42D6600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7122E262-2437-46CB-BC2A-E319407053B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7122E262-2437-46CB-BC2A-E319407053B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7122E262-2437-46CB-BC2A-E319407053B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7122E262-2437-46CB-BC2A-E319407053B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB5773BE-5F8F-48D2-92AF-F80A07BD4884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB5773BE-5F8F-48D2-92AF-F80A07BD4884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB5773BE-5F8F-48D2-92AF-F80A07BD4884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5773BE-5F8F-48D2-92AF-F80A07BD4884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04EFD5A8-4C66-4B24-8718-8758A3547FF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04EFD5A8-4C66-4B24-8718-8758A3547FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04EFD5A8-4C66-4B24-8718-8758A3547FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04EFD5A8-4C66-4B24-8718-8758A3547FF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E996F16B-284F-4FD7-B21A-C209A81C82E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E996F16B-284F-4FD7-B21A-C209A81C82E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E996F16B-284F-4FD7-B21A-C209A81C82E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E996F16B-284F-4FD7-B21A-C209A81C82E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6980375D-D3DC-4184-96C6-C2F438B7DD7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6980375D-D3DC-4184-96C6-C2F438B7DD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6980375D-D3DC-4184-96C6-C2F438B7DD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6980375D-D3DC-4184-96C6-C2F438B7DD7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B28284C1-AA94-4A03-81EE-E8C1122A566E}
+	EndGlobalSection
+EndGlobal
