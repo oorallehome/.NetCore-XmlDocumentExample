@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XSDValidationWithXmlSchemaS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidatingXMLDocumentInDOM", "ValidatingXMLDocumentInDOM\ValidatingXMLDocumentInDOM.csproj", "{6980375D-D3DC-4184-96C6-C2F438B7DD7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocumentValidateMethod", "XmlDocumentValidateMethod\XmlDocumentValidateMethod.csproj", "{2FA8511F-91D4-4B14-8E53-BC59B0EA4CFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{6980375D-D3DC-4184-96C6-C2F438B7DD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6980375D-D3DC-4184-96C6-C2F438B7DD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6980375D-D3DC-4184-96C6-C2F438B7DD7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FA8511F-91D4-4B14-8E53-BC59B0EA4CFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA8511F-91D4-4B14-8E53-BC59B0EA4CFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA8511F-91D4-4B14-8E53-BC59B0EA4CFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA8511F-91D4-4B14-8E53-BC59B0EA4CFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
